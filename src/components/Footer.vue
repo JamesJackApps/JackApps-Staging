@@ -1,0 +1,144 @@
+<template>
+    <footer class="footer  w-full">
+
+        <div>
+            <img class="absolute" src="../assets/Footer/bg-img.png">
+        </div>
+        <div class="footer-content flex  relative flex-row">
+            <div class="relative w-1/3">
+                <img src="../assets/Footer/letter-k-back.png" class="absolute letter-k-top">
+                <img src="../assets/Footer/letterkfront.png">
+
+            </div>
+            <div class="flex flex-col relative p-4 w-1/4">
+                <img class="self-center mb-4" src="../assets/Footer/jack-apps logo one-orange-1.png">
+                <p class="text-center">High level experience in web design and development knowledge, producing quality
+                    work.
+                </p>
+            </div>
+            <div class="flex flex-col relative p-4 w-max ">
+                <h4 class="sub-heading orange-text flex mb-4 ">Quick Links</h4>
+                <ul>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm link_font" href="">Testimonials</a>
+                    </li>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm  link_font" href="">SEO Services</a>
+                    </li>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm  link_font" href="">PPC Management Services</a>
+                    </li>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm  link_font" href="">Web Design and Development</a>
+                    </li>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm  link_font" href="">Strategic Consultation</a>
+                    </li>
+                    <li class="pt-2 pb-2">
+                        <a class="text-sm  link_font" href="">Web Maintenance and Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-col w-64">
+                <div class="flex flex-row ">
+
+                    <div class="flex flex-col relative p-4 w-32 ">
+                        <h4 class="sub-heading orange-text mb-4 w-max">Contact Details</h4>
+                        <ul>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm link_font" href="">Email</a>
+                            </li>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm  link_font" href="">Address</a>
+                            </li>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm  link_font" href="">Contact Number</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                    <div class="flex flex-col relative p-4 w-32">
+                        <h4 class="sub-heading orange-text mb-4 w-max">Company</h4>
+                        <ul>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm link_font " href="">About Us</a>
+                            </li>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm  link_font" href="">Careers</a>
+                            </li>
+                            <li class="pt-2 pb-2">
+                                <a class="text-sm  link_font" href="">FAQ</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-footer btn-orange">
+                    <p class="text-sm">Contact JackApps Now</p>
+                    <font-awesome-icon :icon="['fas', 'arrow-right']" class="items-center text-sm  flex btn-arrow-reg" />
+                </button>
+
+            </div>
+
+        </div>
+        <div class="footer-bottom flex w-full p-4">
+
+            <div class="social-icons gap-2 flex w-1/2">
+                <p class="orange-text">&copy 2023 All Rights Reserved</p>
+                <img src="../assets/Footer/fb.png">
+                <img src="../assets/Footer/twitter.png">
+                <img src="../assets/Footer/email.png">
+                <img src="../assets/Footer/instagram.png">
+                <img src="../assets/Footer/linkedIn.png">
+            </div>
+            <div class="w-1/2 absolute bottom-img right-0">
+                <img src="../assets/Footer/pattern-design.png">
+
+            </div>
+
+            <div class="back-to-top"></div>
+        </div>
+
+
+
+    </footer>
+</template>
+
+<style>
+.footer {
+    background: #130018;
+}
+
+.btn-footer {
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    padding: 15px 20px;
+    display: flex;
+    font-weight: 700;
+    height: 50px;
+}
+
+.btn-arrow-reg {
+    padding-left: 10px;
+}
+
+.social-icon {
+    background: #130018;
+    color: #FF6B00;
+}
+
+.letter-k-top {
+    transform: translate(-4%, -100%);
+}
+
+.footer-content img {
+    max-width: unset;
+}
+
+.bottom-img {
+    transform: translateY(-33px);
+}
+</style>
