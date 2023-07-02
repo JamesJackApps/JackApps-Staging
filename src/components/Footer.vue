@@ -11,7 +11,7 @@
 
             </div>
             <div class="flex flex-col relative p-4 w-1/4">
-                <img class="self-center mb-4" src="../assets/Footer/jack-apps logo one-orange-1.png">
+                <img class="self-center mb-4" src="../assets/Footer/jack-appslogoone-orange-1.png">
                 <p class="text-center">High level experience in web design and development knowledge, producing quality
                     work.
                 </p>
