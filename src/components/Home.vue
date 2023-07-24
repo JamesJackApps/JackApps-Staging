@@ -1,8 +1,7 @@
-<script setup>
 
-</script>
 
-<template>
+
+<template v-on:scroll="doStuff">
   <section class="h-screen">
     <div class="flex p-16">
       <div class="w-1/2 left-0">
@@ -32,12 +31,21 @@
       </div>
       <div class="relative flex w-1/2 right-0">
         <img class="absolute h-128" src="../assets/hero/hero-icons.png">
-        <img class=" h-[500px] absolute right-64" src="../assets/hero/j.png">
 
+        <div>
+          <img class=" h-[500px] absolute right-64" src="../assets/hero/j.png">
+          <div class="ball-container" id="ball-container">
+            <img class="ball absolute" id="ball" src="../assets/ball/ball.png">
+          </div>
+        </div>
       </div>
+
     </div>
 
   </section>
+  <button v-on:click="doStuff()" class=" btn btn-purple absolute top-0 right-48 w-48">Your Business</button>
+
+
   <section class="flex relative flex-col p-8">
     <img class="w-1/2 relative p-4" src="../assets/services/servicesheader.png">
     <div class="flex relative flex-col">
@@ -254,4 +262,105 @@
 .rocket {
   left: -10%;
 }
+
+/* .ball {
+
+ 
+  animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+} */
+
+.ball {
+  bottom: 50px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  /* transform: translateY(-50px); */
+
+
+
+}
+
+.ball-spin {
+  animation: spinball 2s ease-in-out;
+}
+
+@keyframes spinball {
+  100% {
+
+    transform: rotate(-720deg);
+  }
+
+}
+
+.ball-container {
+  left: 33px;
+  /* top: 185px; */
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.animation {
+  top: 185px;
+  transition: transform 0.7s linear;
+  animation: drop, spin;
+  animation-duration: 1s, 1s;
+  animation-delay: 0s, 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  50% {
+    animation-timing-function: cubic-bezier(0, 0, 0, 0);
+
+    transform: rotate(120deg);
+  }
+
+  100% {
+    animation-timing-function: cubic-bezier(0, 0, 0, 0);
+
+    transform: rotate(70deg);
+  }
+}
+
+@keyframes drop {
+
+  0% {
+    animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+
+    transform: translateY(-200px);
+  }
+
+}
 </style>
+
+<script>
+
+export default {
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll(event) {
+      var el = document.getElementById("ball-container")
+      var el2 = document.getElementById("ball")
+      console.log(el);
+      if (window.scrollY > 0) {
+        el.classList.add("animation")
+        el2.classList.add("ball-spin")
+      }
+
+
+    }
+  }
+}
+</script>
+
+
+
