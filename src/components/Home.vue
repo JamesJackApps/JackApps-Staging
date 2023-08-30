@@ -2,28 +2,31 @@
 
 
 <template v-on:scroll="doStuff">
-  <section>
+  <section class="w-screen">
     <div class="flex flex-row mobile-column-reverse p-16 mobile-padding">
-      <div class="h-screen w-1/2 left-0">
-        <div class="mb-8">
-          <h1 class="w-1/2 light-heading sub-heading heading-text sub-heading-font-size mobile-text">
+      <div class=" w-1/2 mobile-j  mobile-text left-0">
+        <div class="mb-8 mobile-text">
+          <h1
+            class="w-1/2 mobile-width mobile-text light-heading sub-heading heading-text sub-heading-font-size mobile-text">
             Are you ready to boost your online success?
           </h1>
         </div>
-        <div class="flex flex-col">
-          <div class="flex flex-col w-5/6">
-            <p class="link-font heading-text">We are determined to make your business in</p>
-            <div class="flex">
-              <p class="orange-text bold text-xl sub-heading  align-baseline pr-2">London</p>
-              <p class="link-font heading-text leading-tight mt-[5px]">successful</p>
+        <div class="flex flex-col justify-center mobile-width mobile-text">
+          <div class="flex flex-col justify-center w-5/6 mobile-width mobile-text">
+            <p class="link-font heading-text justify-center mobile-text">We are determined to make your business in</p>
+            <div class="flex mobile-width justify-center">
+              <p class="orange-text mobile-text bold text-xl sub-heading  align-baseline pr-2">London</p>
+              <p class="link-font mobile-text heading-text leading-tight mt-[5px]">successful</p>
             </div>
             <div class="flex mobile-column pt-4">
-              <textarea placeholder="Enter your email address"
-                class="resize-none h-[50px] w-48 pt-[10px] pl-1 bg-transparent border-t border-b border-l rounded-l-[50px]"></textarea>
-              <div class="w-12 border-t border-r border-b h-[50px] rounded-r-[50px]">
-                <font-awesome-icon class="text-gray-400 pt-[15px]" :icon="['fas', 'magnifying-glass']" />
+              <div class="flex self-center">
+                <textarea placeholder="Enter your email address"
+                  class="resize-none h-[50px] w-48 pt-[10px] pl-1 bg-transparent border-t border-b border-l rounded-l-[50px]"></textarea>
+                <div class="w-12 border-t border-r border-b h-[50px] rounded-r-[50px]">
+                  <font-awesome-icon class="text-gray-400 pt-[15px]" :icon="['fas', 'magnifying-glass']" />
+                </div>
               </div>
-              <button class="btn ml-2 btn-purple">Book a tech session</button>
+              <button class="btn ml-2 btn-purple mobile-button">Book a tech session</button>
             </div>
           </div>
 
@@ -40,34 +43,34 @@
   </section>
 
 
-  <section class="flex flex-col p-8">
-    <img class="w-1/2 relative p-4" src="../assets/services/servicesheader.png">
+  <section class="w-screen flex mobile-col flex-col p-8">
+    <img class="w-1/2 mobile-j relative p-4" src="../assets/services/servicesheader.png">
     <div class="flex relative flex-col">
-      <div class="flex">
-        <div class="flex">
-          <img class=" bottom-0" src="../assets/services/a.png">
+      <div class="flex mobile-column">
+        <div class="flex ">
+          <img class="bottom-0" src="../assets/services/a.png">
           <!-- <div class="ball-container-a" id="ball-container-a">
             <img class="ball-a" id="#aball" src="../assets/ball/ball.png">
           </div> -->
         </div>
 
-        <div class="flex relative p-4 w-full gap-4 right-12 mb-4">
+        <div class="flex relative p-4 h-screen w-full gap-4 right-12 mobile-column image-center mb-4">
 
-          <div class="right-[440px] top-12  absolute">
-            <img class="w-64 h-48 object-cover  rounded" src="../assets/services/service-pic-1.png">
+          <div class="right-[440px] mobile-layout top-12  absolute">
+            <img class="w-64 h-48 object-cover mobile-layout-img  rounded" src="../assets/services/service-pic-1.png">
             <p class="link-font heading-text leading-tight text-center">Web Development</p>
           </div>
-          <div class="right-[220px] top-36 z-40 absolute">
-            <img class="w-64 h-48 object-cover rounded" src="../assets/services/service-pic-2.png">
+          <div class="right-[220px] mobile-layout top-36 z-40 absolute">
+            <img class="w-64 h-48 object-cover mobile-layout-img  rounded" src="../assets/services/service-pic-2.png">
             <p class="link-font heading-text leading-tight text-center">Web Design</p>
           </div>
-          <div class="right-12 top-[-12px] absolute">
-            <img class="w-64 h-48 object-cover rounded" src="../assets/services/service-pic-3.png">
+          <div class="right-12 top-[-12px] mobile-layout absolute">
+            <img class="w-64 h-48 object-cover mobile-layout-img rounded" src="../assets/services/service-pic-3.png">
             <p class="link-font heading-text leading-tight  ml-4 text-center">SEO</p>
           </div>
         </div>
       </div>
-      <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mb-48">
+      <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mobile-hide mb-48">
         <img src="../assets/services/start.png">
         <img src="../assets/services/quote.png">
         <img src="../assets/services/consult.png">
@@ -470,17 +473,54 @@
 
 @media screen and (max-width: 768px) {
 
+  .mobile-hide {
+    display: none;
+    width: unset;
+    bottom: unset;
+    position: unset;
+  }
+
+  .mobile-layout {
+    right: unset;
+    top: unset;
+    align-self: center;
+    position: unset;
+  }
+
+  .image-center {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: unset
+  }
+
+  .mobile-layout-img {
+
+    height: auto;
+
+  }
+
   .mobile-column-reverse {
     flex-direction: column-reverse;
   }
 
+  .mobile-column {
+    flex-direction: column;
+  }
+
   .mobile-width {
-    width: 50vw;
-    height: 50vh;
+    width: 100% !important;
   }
 
   .mobile-j {
     width: 100vw !important;
+    align-self: center;
+  }
+
+  .mobile-button {
+    width: 50%;
+    align-self: center;
   }
 
   .mobile-text {
