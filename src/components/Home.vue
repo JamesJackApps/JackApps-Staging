@@ -497,8 +497,7 @@
 <script>
 
 import ContactForm from "../components/ContactForm.vue"
-import ChatBot from "../components/Chatbot.vue";
-
+import chatbot from "./chatbot.vue";
 
 export default {
   name: 'app',
