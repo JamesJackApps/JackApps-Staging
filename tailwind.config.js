@@ -6,7 +6,13 @@ module.exports = {
     extend: {
       saturate: {
         1: '1%',
+      },
+      zIndex: {
+        '10001': '10001',
+        '10002': '10002',
+        '20002': '20002'
       }
+
     },
   },
   variants: {

@@ -2,12 +2,12 @@
 
 
 <template v-on:scroll="doStuff">
-  <section class="h-screen">
-    <div class="flex p-16">
-      <div class="w-1/2 left-0">
+  <section>
+    <div class="flex flex-row mobile-column-reverse p-16 mobile-padding">
+      <div class="h-screen w-1/2 left-0">
         <div class="mb-8">
-          <h1 class="w-1/2 light-heading sub-heading heading-text sub-heading-font-size">
-            Lorem ipsum dolor sit.
+          <h1 class="w-1/2 light-heading sub-heading heading-text sub-heading-font-size mobile-text">
+            Are you ready to boost your online success?
           </h1>
         </div>
         <div class="flex flex-col">
@@ -17,96 +17,140 @@
               <p class="orange-text bold text-xl sub-heading  align-baseline pr-2">London</p>
               <p class="link-font heading-text leading-tight mt-[5px]">successful</p>
             </div>
-            <div class="flex pt-4">
-              <textarea placeholder="Enter your website URL"
+            <div class="flex mobile-column pt-4">
+              <textarea placeholder="Enter your email address"
                 class="resize-none h-[50px] w-48 pt-[10px] pl-1 bg-transparent border-t border-b border-l rounded-l-[50px]"></textarea>
               <div class="w-12 border-t border-r border-b h-[50px] rounded-r-[50px]">
                 <font-awesome-icon class="text-gray-400 pt-[15px]" :icon="['fas', 'magnifying-glass']" />
               </div>
-              <button class="btn ml-2 btn-purple">Analyze Website</button>
+              <button class="btn ml-2 btn-purple">Book a tech session</button>
             </div>
           </div>
 
         </div>
       </div>
-      <div class="relative flex w-1/2 right-0">
-        <img class="absolute h-128" src="../assets/hero/hero-icons.png">
-
-        <div>
-          <img class=" h-[500px] absolute right-64" src="../assets/hero/j.png">
-          <div class="ball-container" id="ball-container">
+      <div class="flex relative h-screen mt-4 items-center ">
+        <img src="../assets/hero/hero-icons.png">
+        <img class=" absolute" src="../assets/hero/j.png">
+        <!-- <div class="ball-container" id="ball-container">
             <img class="ball absolute" id="ball" src="../assets/ball/ball.png">
-          </div>
-        </div>
+          </div> -->
       </div>
-
     </div>
-
   </section>
-  <button v-on:click="doStuff()" class=" btn btn-purple absolute top-0 right-48 w-48">Your Business</button>
 
 
-  <section class="flex relative flex-col p-8">
+  <section class="flex flex-col p-8">
     <img class="w-1/2 relative p-4" src="../assets/services/servicesheader.png">
     <div class="flex relative flex-col">
       <div class="flex">
-        <div class="flex relative">
+        <div class="flex">
           <img class=" bottom-0" src="../assets/services/a.png">
+          <!-- <div class="ball-container-a" id="ball-container-a">
+            <img class="ball-a" id="#aball" src="../assets/ball/ball.png">
+          </div> -->
         </div>
-        <div class="flex relative p-4 w-full gap-4 right-12">
 
-          <img class="w-64 h-48 object-cover right-[440px] top-12  absolute rounded"
-            src="../assets/services/service-pic-1.png">
-          <img class="w-64 h-48 object-cover right-[220px] top-36 z-40 absolute rounded"
-            src="../assets/services/service-pic-2.png">
-          <img class="w-64 h-48 object-cover right-12 top-[-12px]   absolute rounded"
-            src="../assets/services/service-pic-3.png">
+        <div class="flex relative p-4 w-full gap-4 right-12 mb-4">
+
+          <div class="right-[440px] top-12  absolute">
+            <img class="w-64 h-48 object-cover  rounded" src="../assets/services/service-pic-1.png">
+            <p class="link-font heading-text leading-tight text-center">Web Development</p>
+          </div>
+          <div class="right-[220px] top-36 z-40 absolute">
+            <img class="w-64 h-48 object-cover rounded" src="../assets/services/service-pic-2.png">
+            <p class="link-font heading-text leading-tight text-center">Web Design</p>
+          </div>
+          <div class="right-12 top-[-12px] absolute">
+            <img class="w-64 h-48 object-cover rounded" src="../assets/services/service-pic-3.png">
+            <p class="link-font heading-text leading-tight  ml-4 text-center">SEO</p>
+          </div>
         </div>
       </div>
-      <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-120px] mb-48">
+      <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mb-48">
         <img src="../assets/services/start.png">
         <img src="../assets/services/quote.png">
         <img src="../assets/services/consult.png">
       </div>
     </div>
-    <div class="relative flex flex-col justify-center">
-      <img class=" self-center" src="../assets/services/upgrade-now-text.png">
-      <button class="btn btn-purple absolute top-0 right-48 w-48">Your Business</button>
-      <img class="w-3/5 self-center" src="../assets/services/moneyframe.png">
-    </div>
   </section>
+  <!-- <section>
+     </section> -->
   <section class="relative flex">
     <img src="../assets/schedulecall/schedulecallbg.png">
     <img class="absolute bottom-12 right-1/4 " src="../assets/schedulecall/schedulecalltext.png">
-    <button class="btn btn-orange absolute bottom-12 w-48 right-96">Call</button>
+    <a href="https://calendly.com/jackapplications/15minute-interview" target="_blank">
+
+      <button class="btn btn-orange absolute bottom-12 w-48 right-96">Call</button>
+    </a>
     <img class="absolute w-1/4 top-[-50px] right-12 " src="../assets/schedulecall/phone.png">
 
   </section>
-  <section class="bg-gray-100">
-    <div class="mt-8 flex flex-col justify-center pt-24">
+  <section class="bg-gray-100 flex flex-row-reverse p-4">
+    <div class="mt-8 flex flex-col justify-center pt-24 w-1/2">
       <img class="w-1/2 self-center" src="../assets/unlocksuccess/Unlocksuccess.png">
-      <img class="w-1/2 self-center" src="../assets/unlocksuccess/C.png">
-      <img class="w-3/4 self-center absolute" src="../assets/unlocksuccess/usi.png">
+      <div class="relative flex justify-center">
+        <img class="w-1/2 self-center" src="../assets/unlocksuccess/C.png">
+        <!-- <div class="ball-container-c animation-c" id="ball-container-c">
+          <img class="ball-c absolute" id="ball-c" src="../assets/ball/ball.png">
+        </div> -->
+      </div>
+      <img class="w-1/2 self-center absolute" src="../assets/unlocksuccess/usi.png">
 
     </div>
+    <div class=" flex flex-col w-1/2 justify-center items-center text-center">
+      <h3 class="light-heading sub-heading heading-text sub-heading-font-size">Benefits</h3>
+      <ul>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+          <h4 class="h-2">Bring Organic Search Traffic to your Website.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+          <h4 class="h-2">Generate Leads Cost-Effectively.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2">Increases Brand Awareness.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2">Get Ahead of the Competition.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2">Optimize Your Website for Mobile Users.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2">Build Trust.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2">Easier Return on Investment</h4>
+        </li>
+      </ul>
+    </div>
+
   </section>
   <section class="testimonial relative w-100 pt-4">
     <img class="background" src="../assets/testimonials/tesimonialbg.png">
     <div class="flex absolute top-24 justify-center">
       <div class="test-card w-1/4  p-4 m-4 mt-16">
         <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
-          <p class="text-black italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae, et illum
-            pariatur
-            fugit consequuntur
-            veritatis, consectetur officia ea consequatur eius vero veniam delectus tempora error vel neque
-            perspiciatis
-            porro?</p>
+          <p class="text-black italic">
+            "They were excellent with timelines and with communications."</p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial1.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center gap-2 p-2">
-            <h4 class="text-base font-semibold">Kristen Watson</h4>
-            <p class="small-grey">Marketing Director</p>
+            <h4 class="text-base font-semibold">Joe Wong</h4>
+            <p class="small-grey">Founder & Owner, Infinity 8 Digital</p>
           </div>
         </div>
 
@@ -114,35 +158,28 @@
 
       <div class="test-card w-1/4  p-4 m-4">
         <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
-          <p class="text-black italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae, et illum
-            pariatur
-            fugit consequuntur
-            veritatis, consectetur officia ea consequatur eius vero veniam delectus tempora error vel neque
-            perspiciatis
-            porro?</p>
+          <p class="text-black italic">"I must say they were unique compared to the other agencies we interviewed."
+          </p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial2.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center gap-2 p-2">
-            <h4 class="text-base font-semibold">Jerome Bell</h4>
-            <p class="small-grey">Project Manager</p>
+            <h4 class="text-base font-semibold">Leander De Caluwe</h4>
+            <p class="small-grey">CEO, Kickerfy</p>
           </div>
         </div>
 
       </div>
       <div class="test-card w-1/4  p-4 m-4 mt-6">
         <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
-          <p class="text-black italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae, et illum
-            pariatur
-            fugit consequuntur
-            veritatis, consectetur officia ea consequatur eius vero veniam delectus tempora error vel neque
-            perspiciatis
-            porro?</p>
+          <p class="text-black italic">"We were very impressed with their project management, communication, and quality
+            of their work."
+          </p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial3.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center gap-2 p-2">
-            <h4 class="text-base font-semibold">Jane Cooper</h4>
+            <h4 class="text-base font-semibold">Irfan Mir</h4>
             <p class="small-grey">Director of Sales</p>
           </div>
         </div>
@@ -153,38 +190,20 @@
 
 
   </section>
-  <section class="w-screen h-full pb-60 ">
+
+  <!-- <section class="h-screen w-full">
+    <Chatbox />
+  </section> -->
+
+  <section class="w-screen pt-24 h-full pb-60 flex flex-row ">
     <div class="h-full"> <img class="rocket relative" src="../assets/CTA2/rocket.png">
     </div>
-    <div class="h-full flex flex-row space-x-24 justify-center">
-      <div class=" flex flex-col justify-center items-center gap-4">
-        <div class="card card1">
-        </div>
-        <div class="info-cont">
-          <p class="text-black text-center mt-2 card-text pb-2">Explore</p>
-          <button class="btn btn-purple ">Explore</button>
-        </div>
-      </div>
-      <div class=" flex flex-col justify-center items-center gap-4 card-container2">
-        <div class="card card2">
-        </div>
-        <div class="info-cont">
-          <p class="text-black text-center mt-2 card-text pb-2">Explore</p>
-          <button class="btn btn-purple ">Explore</button>
-        </div>
-      </div>
-
-      <div class=" flex flex-col justify-center items-center gap-4 card-container3">
-        <div class="card card3">
-        </div>
-        <div class="info-cont">
-          <p class="text-black text-center mt-2 card-text pb-2">Explore</p>
-          <button class="btn btn-purple ">Explore</button>
-        </div>
-      </div>
-    </div>
+    <ContactForm />
 
   </section>
+  <div class=" fixed z-20002 top-0 right-0">
+    <ChatBot />
+  </div>
 </template>
 
 <style scoped>
@@ -263,11 +282,6 @@
   left: -10%;
 }
 
-/* .ball {
-
- 
-  animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
-} */
 
 .ball {
   bottom: 50px;
@@ -275,19 +289,46 @@
   width: 50px;
   height: 50px;
   /* transform: translateY(-50px); */
-
-
-
 }
 
-.ball-spin {
+.ball-a {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 85px;
+  top: 120px;
+  /* transform: translateY(-50px); */
+}
+
+.ball-c {
+  top: 180px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+
+  /* transform: translateY(-50px); */
+}
+
+/* .ball-spin-reverse {
   animation: spinball 2s ease-in-out;
 }
+
+.ball-spin-reverse {
+  animation: spinball-opposite 2s ease-in-out;
+} */
 
 @keyframes spinball {
   100% {
 
     transform: rotate(-720deg);
+  }
+
+}
+
+@keyframes spinball-opposite {
+  100% {
+
+    transform: rotate(720deg);
   }
 
 }
@@ -303,13 +344,101 @@
   transform: rotate(0deg);
 }
 
+.ball-container-a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 230px;
+  height: 230px;
+  border: 5px solid transparent;
+
+}
+
+.ball-container-c {
+  left: 405px;
+  top: 40px !important;
+  width: 475px;
+  height: 480px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
 .animation {
   top: 185px;
   transition: transform 0.7s linear;
   animation: drop, spin;
-  animation-duration: 1s, 1s;
+  animation-duration: 1s, 2s;
   animation-delay: 0s, 1s;
   animation-fill-mode: forwards;
+}
+
+.animation-c {
+  top: 185px;
+  animation: translateY, rotate;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+
+.animation-a {
+
+  top: 180px;
+  animation: animate-a;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes translateY {
+  0% {
+    animation-timing-function: ease-in;
+
+
+    transform-origin: 50% 50%;
+
+    transform: rotate(0deg);
+  }
+
+
+  33% {
+
+    animation-timing-function: ease-out;
+
+    transform-origin: 50% calc(50% - 10px);
+
+    transform: rotate(-90deg);
+
+  }
+
+  66% {
+    animation-timing-function: ease-in-out;
+    transform-origin: 50% 50%;
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+    transform-origin: 50% calc(50% - 10px);
+    transform: rotate(-90deg);
+
+  }
+}
+
+/* 
+@keyframes rotate {
+  100% {
+    transform: rotate(-180deg);
+  }
+
+} */
+
+@keyframes animate-a {
+  0% {
+    animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+
+    transform: translate3d(70px, -200px, 0);
+  }
 }
 
 @keyframes spin {
@@ -322,7 +451,7 @@
   100% {
     animation-timing-function: cubic-bezier(0, 0, 0, 0);
 
-    transform: rotate(70deg);
+    transform: rotate(65deg);
   }
 }
 
@@ -333,13 +462,70 @@
 
     transform: translateY(-200px);
   }
+}
 
+.circle {
+  background-color: #FF6B00;
+}
+
+@media screen and (max-width: 768px) {
+
+  .mobile-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .mobile-width {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .mobile-text {
+    text-align: center;
+  }
+
+  .mobile-padding {
+    padding: 0;
+  }
+
+  .mobile-position-absolute {
+    position: absolute;
+    z-index: -1;
+  }
 }
 </style>
 
 <script>
 
+import ContactForm from "../components/ContactForm.vue"
+import ChatBot from "../components/chatbot.vue";
+
+
 export default {
+  name: 'app',
+  components: {
+    ContactForm,
+    ChatBot
+  },
+
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+
+  computed: {
+    formValid() {
+      const { name, email, message } = this;
+      return (
+        name.length > 0 &&
+        /(.+)@(.+){2,}.(.+){2,}/.test(email) &&
+        message.length > 0
+      );
+    },
+  },
+
   created() {
     window.addEventListener('scroll', this.handleScroll);
   },
@@ -347,14 +533,46 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    onReset() {
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
+    submit() {
+      if (!this.formValid) {
+        return;
+      }
+      if (!localStorage.getItem("messages")) {
+        localStorage.setItem("messages", JSON.stringify([]));
+      }
+      const messages = JSON.parse(localStorage.getItem("messages"));
+      const { name, email, message } = this;
+      messages.push({
+        name,
+        email,
+        message,
+      });
+      localStorage.setItem("messages", JSON.stringify(messages));
+      console.log(messages)
+    },
+
     handleScroll(event) {
       var el = document.getElementById("ball-container")
-      var el2 = document.getElementById("ball")
-      console.log(el);
+      var a = document.getElementById("ball-container-a")
       if (window.scrollY > 0) {
-        el.classList.add("animation")
-        el2.classList.add("ball-spin")
+
+        const observer = new IntersectionObserver(entries => {
+          el.classList.toggle('animation', entries[0].isIntersecting);
+        });
+
+        observer.observe(el);
       }
+
+      const observer = new IntersectionObserver(entries => {
+        a.classList.toggle('animation-a', entries[0].isIntersecting);
+      });
+
+      observer.observe(a);
 
 
     }

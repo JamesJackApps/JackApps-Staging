@@ -16,7 +16,7 @@
                     work.
                 </p>
             </div>
-            <div class="flex flex-col relative p-4 w-max ">
+            <!-- <div class="flex flex-col relative p-4 w-max ">
                 <h4 class="sub-heading orange-text flex mb-4 ">Quick Links</h4>
                 <ul>
                     <li class="pt-2 pb-2">
@@ -38,28 +38,30 @@
                         <a class="text-sm  link_font" href="">Web Maintenance and Support</a>
                     </li>
                 </ul>
-            </div>
-            <div class="flex flex-col w-64">
+            </div>-->
+            <div class="flex flex-col ">
                 <div class="flex flex-row ">
 
-                    <div class="flex flex-col relative p-4 w-32 ">
+                    <div class="flex flex-col relative p-4  ">
                         <h4 class="sub-heading orange-text mb-4 w-max">Contact Details</h4>
                         <ul>
                             <li class="pt-2 pb-2">
-                                <a class="text-sm link_font" href="">Email</a>
+                                <a class="text-sm link_font" href="">Email <p>projects@jackapplications.com</p></a>
                             </li>
                             <li class="pt-2 pb-2">
-                                <a class="text-sm  link_font" href="">Address</a>
+                                <a class="text-sm  link_font" href="">Address<p>Jack Applications Limited, First Floor, 85
+                                        Great Portland St, London, W1W 7LT
+                                    </p></a>
                             </li>
                             <li class="pt-2 pb-2">
-                                <a class="text-sm  link_font" href="">Contact Number</a>
+                                <a class="text-sm  link_font" href="">Contact Number<p>07468 624 288 </p></a>
                             </li>
 
                         </ul>
 
 
                     </div>
-                    <div class="flex flex-col relative p-4 w-32">
+                    <!-- <div class="flex flex-col relative p-4 w-32">
                         <h4 class="sub-heading orange-text mb-4 w-max">Company</h4>
                         <ul>
                             <li class="pt-2 pb-2">
@@ -73,9 +75,9 @@
                             </li>
 
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
-                <button class="btn-footer btn-orange">
+                <button class="btn-footer btn-orange w-1/2">
                     <p class="text-sm">Contact JackApps Now</p>
                     <font-awesome-icon :icon="['fas', 'arrow-right']" class="items-center text-sm  flex btn-arrow-reg" />
                 </button>
@@ -87,11 +89,20 @@
 
             <div class="social-icons gap-2 flex w-1/2">
                 <p class="orange-text">&copy 2023 All Rights Reserved</p>
-                <img src="../assets/Footer/fb.png">
-                <img src="../assets/Footer/twitter.png">
-                <img src="../assets/Footer/email.png">
-                <img src="../assets/Footer/instagram.png">
-                <img src="../assets/Footer/linkedIn.png">
+                <a href="https://www.facebook.com/people/Jack-Applications/100079911980097/" target="_blank"> <img
+                        src="../assets/Footer/fb.png">
+                </a>
+                <a href="  https://twitter.com/JackAppsUK" target="_blank">
+                    <img src="../assets/Footer/twitter.png">
+                </a>
+                <a href="mailto:info@jackapplications.com"> <img src="../assets/Footer/email.png">
+                </a>
+                <a href="https://www.instagram.com/jackapplications/">
+                    <img src="../assets/Footer/instagram.png">
+                </a>
+                <a href="https://www.linkedin.com/company/jackapps/">
+                    <img src="../assets/Footer/linkedIn.png">
+                </a>
             </div>
             <div class="w-1/2 absolute bottom-img right-0">
                 <img src="../assets/Footer/pattern-design.png">
