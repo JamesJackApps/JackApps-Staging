@@ -29,7 +29,7 @@
 
         </div>
       </div>
-      <div class="flex relative h-screen mt-4 items-center ">
+      <div class="flex relative h-screen mt-4 items-center mobile-j ">
         <img src="../assets/hero/hero-icons.png">
         <img class=" absolute" src="../assets/hero/j.png">
         <!-- <div class="ball-container" id="ball-container">
@@ -477,6 +477,10 @@
   .mobile-width {
     width: 50vw;
     height: 50vh;
+  }
+
+  .mobile-j {
+    width: 100vw !important;
   }
 
   .mobile-text {
