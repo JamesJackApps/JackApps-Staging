@@ -79,79 +79,81 @@
   </section>
   <!-- <section>
      </section> -->
-  <section class="relative flex">
-    <img src="../assets/schedulecall/schedulecallbg.png">
-    <img class="absolute bottom-12 right-1/4 " src="../assets/schedulecall/schedulecalltext.png">
+  <section class="relative w-screen flex mobile-schedule">
+    <img class="w-screen object-cover" src="../assets/schedulecall/schedulecallbg.png">
+    <img class="mobile-schedule absolute bottom-12 right-1/4  mobile-schedule-text "
+      src="../assets/schedulecall/schedulecalltext.png">
     <a href="https://calendly.com/jackapplications/15minute-interview" target="_blank">
 
-      <button class="btn btn-orange absolute bottom-12 w-48 right-96">Call</button>
+      <button class="btn btn-orange mobile-schedule mobile-schedule-button absolute bottom-12 w-48 right-96">Call</button>
     </a>
-    <img class="absolute w-1/4 top-[-50px] right-12 " src="../assets/schedulecall/phone.png">
+    <img class="absolute w-1/4 top-[-50px] right-12 mobile-schedule mobile-schedule-img "
+      src="../assets/schedulecall/phone.png">
 
   </section>
-  <section class="bg-gray-100 flex flex-row-reverse p-4">
-    <div class="mt-8 flex flex-col justify-center pt-24 w-1/2">
-      <img class="w-1/2 self-center" src="../assets/unlocksuccess/Unlocksuccess.png">
+  <section class="w-screen bg-gray-100 flex flex-row-reverse mobile-column-reverse p-4">
+    <div class="mt-8 flex flex-col justify-center mob-ben pt-24 w-1/2 mobile-j">
+      <img class="w-1/2 mobile-j mobile-benefits-img self-center" src="../assets/unlocksuccess/Unlocksuccess.png">
       <div class="relative flex justify-center">
-        <img class="w-1/2 self-center" src="../assets/unlocksuccess/C.png">
+        <img class="w-1/2 mobile-j mobile-benefits-img self-center" src="../assets/unlocksuccess/C.png">
         <!-- <div class="ball-container-c animation-c" id="ball-container-c">
           <img class="ball-c absolute" id="ball-c" src="../assets/ball/ball.png">
         </div> -->
       </div>
-      <img class="w-1/2 self-center absolute" src="../assets/unlocksuccess/usi.png">
+      <img class="w-1/2 mobile-j self-center absolute" src="../assets/unlocksuccess/usi.png">
 
     </div>
-    <div class=" flex flex-col w-1/2 justify-center items-center text-center">
+    <div class=" flex flex-col w-1/2 mobile-j justify-center items-center text-center">
       <h3 class="light-heading sub-heading heading-text sub-heading-font-size">Benefits</h3>
       <ul>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
-          <h4 class="h-2">Bring Organic Search Traffic to your Website.</h4>
+          <h4 class="h-2 mob-text">Bring Organic Search Traffic to your Website.</h4>
         </li>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
-          <h4 class="h-2">Generate Leads Cost-Effectively.</h4>
-        </li>
-        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
-          <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
-
-          <h4 class="h-2">Increases Brand Awareness.</h4>
+          <h4 class="h-2 mob-text">Generate Leads Cost-Effectively.</h4>
         </li>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
 
-          <h4 class="h-2">Get Ahead of the Competition.</h4>
+          <h4 class="h-2 mob-text">Increases Brand Awareness.</h4>
         </li>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
 
-          <h4 class="h-2">Optimize Your Website for Mobile Users.</h4>
+          <h4 class="h-2 mob-text">Get Ahead of the Competition.</h4>
         </li>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
 
-          <h4 class="h-2">Build Trust.</h4>
+          <h4 class="h-2 mob-text">Optimize Your Website for Mobile Users.</h4>
         </li>
         <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
           <font-awesome-icon :icon="['fa', 'check']" class="h-2 circle text-white p-2 rounded-full" />
 
-          <h4 class="h-2">Easier Return on Investment</h4>
+          <h4 class="h-2 mob-text">Build Trust.</h4>
+        </li>
+        <li class=" p-4 gap-2 link-font heading-text leading-tight  text-center flex flex-row">
+          <font-awesome-icon :icon="['fa', 'check']" class="h-2 mob-text circle text-white p-2 rounded-full" />
+
+          <h4 class="h-2 mob-text">Easier Return on Investment</h4>
         </li>
       </ul>
     </div>
 
   </section>
-  <section class="testimonial relative w-100 pt-4">
-    <img class="background" src="../assets/testimonials/tesimonialbg.png">
-    <div class="flex absolute top-24 justify-center">
-      <div class="test-card w-1/4  p-4 m-4 mt-16">
-        <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
+  <section class="testimonial relative w-screen pt-4 mobile-testimonial-padding">
+    <img class="background  mobile-testimonial  object-cover" src="../assets/testimonials/tesimonialbg.png">
+    <div class="flex mobile-column absolute top-24 mobile-testimonial-content  justify-center">
+      <div class="test-card mobile-card w-1/4 test-card-layout  p-4 m-4 mt-16">
+        <div class="test-card__text rounded-t-lg mobile-card-content bg-white pt-20 pb-20 pl-8 pr-8">
           <p class="text-black italic">
             "They were excellent with timelines and with communications."</p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial1.png" class="card-content__img">
-          <div class="card-content__text flex flex-col justify-center gap-2 p-2">
+          <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
             <h4 class="text-base font-semibold">Joe Wong</h4>
             <p class="small-grey">Founder & Owner, Infinity 8 Digital</p>
           </div>
@@ -159,29 +161,29 @@
 
       </div>
 
-      <div class="test-card w-1/4  p-4 m-4">
-        <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
+      <div class="test-card mobile-card w-1/4  p-4 m-4">
+        <div class="test-card__text mobile-card-content rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
           <p class="text-black italic">"I must say they were unique compared to the other agencies we interviewed."
           </p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial2.png" class="card-content__img">
-          <div class="card-content__text flex flex-col justify-center gap-2 p-2">
+          <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
             <h4 class="text-base font-semibold">Leander De Caluwe</h4>
             <p class="small-grey">CEO, Kickerfy</p>
           </div>
         </div>
 
       </div>
-      <div class="test-card w-1/4  p-4 m-4 mt-6">
-        <div class="test-card__text rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
+      <div class="test-card mobile-card w-1/4  p-4 m-4 mt-6">
+        <div class="test-card__text mobile-card-content rounded-t-lg bg-white pt-20 pb-20 pl-8 pr-8">
           <p class="text-black italic">"We were very impressed with their project management, communication, and quality
             of their work."
           </p>
         </div>
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial3.png" class="card-content__img">
-          <div class="card-content__text flex flex-col justify-center gap-2 p-2">
+          <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
             <h4 class="text-base font-semibold">Irfan Mir</h4>
             <p class="small-grey">Director of Sales</p>
           </div>
@@ -194,11 +196,7 @@
 
   </section>
 
-  <!-- <section class="h-screen w-full">
-    <Chatbox />
-  </section> -->
-
-  <section class="w-screen pt-24 h-full pb-60 flex flex-row ">
+  <section class="w-screen pt-24 h-full pb-60 flex flex-row mobile-column ">
     <div class="h-full"> <img class="rocket relative" src="../assets/CTA2/rocket.png">
     </div>
     <ContactForm />
@@ -283,6 +281,12 @@
 
 .rocket {
   left: -10%;
+
+  @media screen and (max-width: 768px) {
+    left: unset;
+    height: 100vh;
+    object-fit: cover;
+  }
 }
 
 
@@ -472,6 +476,91 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .mobile-card {
+    width: 90%;
+    align-self: center;
+    margin-top: 20px;
+    margin-left: unset;
+    margin-right: unset;
+    padding: unset;
+  }
+
+
+  .mobile-testimonial-padding {
+    padding: unset;
+  }
+
+  .mobile-card-info {
+    padding: unset;
+    gap: 5px;
+  }
+
+  /* .card-content__img {
+    display: none;
+  } */
+
+  .mobile-card-content {
+    padding: 5px 15px 5px 15px;
+  }
+
+  .test-card-layout {
+
+    top: 0;
+  }
+
+  .mobile-test {
+    position: relative;
+    height: 100vh;
+  }
+
+  .mobile-testimonial {
+    height: 100vh;
+  }
+
+  .mobile-testimonial-content {
+    position: absolute;
+    top: 0;
+  }
+
+  .mob-text {
+    font-size: 14px;
+  }
+
+  .mob-ben {
+    padding-top: 5px;
+  }
+
+  .mobile-schedule {
+    bottom: unset;
+    top: unset;
+    right: unset;
+    height: 50vh;
+  }
+
+  .mobile-schedule-text {
+    width: 90vw;
+    height: auto;
+    top: 50px;
+    padding: 5px;
+  }
+
+  .mobile-schedule-img {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+
+  .mobile-schedule-button {
+    position: absolute;
+    height: 50px;
+    width: 180px;
+    top: 42%;
+    left: 10%;
+  }
+
 
   .mobile-hide {
     display: none;

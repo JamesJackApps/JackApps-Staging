@@ -126,5 +126,10 @@ textarea {
     background-color: rgba(255, 107, 0, 0.4);
     padding: 20px;
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+    }
 }
 </style>

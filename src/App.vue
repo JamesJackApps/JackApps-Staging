@@ -1,7 +1,7 @@
 lines (27 sloc)  459 Bytes
 
 <template>
-  <div class="bg-white min-h-screen">
+  <div class="bg-white min-h-screen w-screen">
     <Nav />
     <Home />
     <!-- <router-view /> -->
