@@ -89,7 +89,7 @@
             </div>
             <div class="footer-bottom flex w-full p-4">
 
-                <div class="social-icons gap-2 flex w-1/2">
+                <div class="social-icons gap-2 flex mobile-social w-1/2 mobile-width">
                     <p class="orange-text">&copy 2023 All Rights Reserved</p>
                     <a href="https://www.facebook.com/people/Jack-Applications/100079911980097/" target="_blank"> <img
                             src="../assets/Footer/fb.png">
@@ -126,6 +126,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .mobile-social {
+        flex-direction: row-reverse;
+
+    }
 
     .mobile-row {
         flex-direction: row;
