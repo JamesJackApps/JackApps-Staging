@@ -1,9 +1,9 @@
 <template>
-    <div v-show="isShow" class="fixed z-20002 w-2/5 bottom-36 right-0 border-colour-black border-2">
+    <div v-show="isShow" class="fixed z-20002 w-2/5 bottom-36 mobile-chatbot right-0 border-colour-black border-2">
         <iframe src="https://www.chatbase.co/chatbot-iframe/JUPURnaLPSIcCitHt5336" width="100%"
             style="height: 100%; min-height: 400px" frameborder="0"></iframe>
     </div>
-    <img v-show="isShow2" class="h-[100px] w-auto fixed bottom-20 right-28" src="../assets/CTA2/bubble.png">
+    <img v-show="isShow2" class="h-[100px] mobile-bubble w-auto fixed bottom-20 right-28" src="../assets/CTA2/bubble.png">
 
     <button class=" mb-2 fixed bottom-0 right-0 z-20002" @click="isShow = !isShow, isShow2 = !isShow2">
         <img class="h-[150px] w-[150px]" src="../assets/CTA2/chatbotsquare.png"></button>
@@ -19,3 +19,21 @@ export default {
     }, props: { msg: String, },
 };
 </script>
+
+<style>
+@media screen and (max-width: 768px) {
+    .mobile-chatbot {
+        width: 100vw !important;
+        left: 0 !important;
+    }
+
+    .mobile-bubble {
+        height: 50px;
+    }
+
+    .mobile-robot {
+        height: 100px;
+        width: 100px;
+    }
+}
+</style>
