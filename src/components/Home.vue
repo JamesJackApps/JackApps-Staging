@@ -19,14 +19,15 @@
               <p class="link-font mobile-text heading-text leading-tight mt-[5px]">successful</p>
             </div>
             <div class="flex mobile-column pt-4">
-              <div class="flex self-center">
+              <!-- <div class="flex self-center">
                 <textarea placeholder="Enter your email address"
                   class="resize-none h-[50px] w-48 pt-[10px] pl-1 bg-transparent border-t border-b border-l rounded-l-[50px]"></textarea>
                 <div class="w-12 border-t border-r border-b h-[50px] rounded-r-[50px]">
                   <font-awesome-icon class="text-gray-400 pt-[15px]" :icon="['fas', 'magnifying-glass']" />
                 </div>
-              </div>
-              <button class="btn ml-2 btn-purple mobile-button">Book a tech session</button>
+              </div> -->
+              <button @click="goto('contact')" class="btn ml-2 btn-purple mobile-button">Book a tech
+                session</button>
             </div>
           </div>
 
@@ -71,9 +72,9 @@
         </div>
       </div>
       <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mobile-hide mb-48">
-        <img src="../assets/services/start.png">
-        <img src="../assets/services/quote.png">
-        <img src="../assets/services/consult.png">
+        <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/start.png">
+        <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/quote.png">
+        <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/consult.png">
       </div>
     </div>
   </section>
@@ -199,8 +200,9 @@
   <section class="w-screen pt-24 h-full pb-60 flex flex-row mobile-column ">
     <div class="h-full"> <img class="rocket relative" src="../assets/CTA2/rocket.png">
     </div>
-    <ContactForm />
-
+    <div ref="contact" id="contact">
+      <ContactForm />
+    </div>
   </section>
   <div class=" fixed z-20002 top-0 right-0">
     <ChatBot />
@@ -669,6 +671,15 @@ export default {
       this.name = "";
       this.email = "";
       this.message = "";
+    },
+    goto(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+      window.scrollTo({
+        top: top,
+        left: 0,
+        behavior: "smooth",
+      });
     },
     submit() {
       if (!this.formValid) {

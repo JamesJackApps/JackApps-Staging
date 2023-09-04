@@ -46,7 +46,8 @@
                             <h4 class="sub-heading orange-text mb-4 w-max">Contact Details</h4>
                             <ul>
                                 <li class="pt-2 pb-2">
-                                    <a class="text-sm link_font" href="">Email <p>projects@jackapplications.com</p></a>
+                                    <a class="text-sm link_font cursor-pointer" @click="goto('contact')">Email <p>
+                                            projects@jackapplications.com</p></a>
                                 </li>
                                 <li class="pt-2 pb-2">
                                     <a class="text-sm  link_font" href="">Address<p>Jack Applications Limited, First Floor,
@@ -55,7 +56,9 @@
                                         </p></a>
                                 </li>
                                 <li class="pt-2 pb-2">
-                                    <a class="text-sm  link_font" href="">Contact Number<p>07468 624 288 </p></a>
+                                    <a class="text-sm  link_font cursor-pointer" href="tel:07468624228">Contact Number<p>
+                                            07468 624 288 </p>
+                                    </a>
                                 </li>
 
                             </ul>
@@ -78,7 +81,7 @@
                         </ul>
                     </div> -->
                     </div>
-                    <button class="btn-footer btn-orange w-1/2">
+                    <button @click="goto()" class="btn-footer btn-orange w-1/2">
                         <p class="text-sm">Contact JackApps Now</p>
                         <font-awesome-icon :icon="['fas', 'arrow-right']"
                             class="items-center text-sm  flex btn-arrow-reg" />
@@ -118,6 +121,23 @@
         </div>
     </footer>
 </template>
+
+<script>
+
+export default {
+    methods: {
+        goto() {
+            var element = document.getElementById("contact")
+            var top = element.offsetTop;
+            window.scrollTo({
+                top: top,
+                left: 0,
+                behavior: "smooth",
+            });
+        },
+    }
+}
+</script>
 
 <style>
 .footer {
