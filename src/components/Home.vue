@@ -14,8 +14,8 @@
         <div class="flex flex-col justify-center mobile-width mobile-text">
           <div class="flex flex-col justify-center w-5/6 mobile-width mobile-text">
             <p class="link-font heading-text justify-center mobile-text">We are determined to make your business in</p>
-            <div class="flex mobile-width justify-center">
-              <p class="orange-text mobile-text bold text-xl sub-heading  align-baseline pr-2">London</p>
+            <div class="flex mobile-width mobile-justify">
+              <p class="orange-text mobile-text bold text-xl sub-heading  align-baseline pr-2">{{ city }}</p>
               <p class="link-font mobile-text heading-text leading-tight mt-[5px]">successful</p>
             </div>
             <div class="flex mobile-column pt-4">
@@ -622,6 +622,10 @@
     padding: 0;
   }
 
+  .mobile-justify {
+    justify-content: center;
+  }
+
   .mobile-position-absolute {
     position: absolute;
     z-index: -1;
@@ -640,12 +644,16 @@ export default {
     ContactForm,
     ChatBot
   },
+  mounted() {
+    this.getGeolocationInformation()
+  },
 
   data() {
     return {
       name: "",
       email: "",
       message: "",
+      city: "",
     };
   },
 
@@ -667,6 +675,19 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    async getGeolocationInformation() {
+      // send your API request here
+      const API_KEY = 'df0fb3b765af472ba970603aca182bef';
+      const API_URL = 'https://ipgeolocation.abstractapi.com/v1/?api_key=' + API_KEY;
+      const apiResponse = await fetch(API_URL);
+      const data = await apiResponse.json();
+      const { city, country, region } = data;
+      this.city = city;
+      this.region = region;
+      this.country = country;
+
+
+    },
     onReset() {
       this.name = "";
       this.email = "";
