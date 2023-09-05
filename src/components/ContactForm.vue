@@ -18,10 +18,17 @@
 </template>
 
 <script>
+import { faPersonWalkingDashedLineArrowRight, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import emailjs from 'emailjs-com';
+import { useToast } from "vue-toastification";
 
 export default {
     name: 'ContactUs',
+    setup() {
+        const toast = useToast();
+        return { toast }
+    },
+
     data() {
         return {
             name: '',
@@ -31,25 +38,96 @@ export default {
     },
     methods: {
         sendEmail(e) {
-            try {
-                emailjs.sendForm('service_ps7esew', 'template_nuokbvq', e.target, 'fKg-Qp0mj7sy-gvcD', {
-                    name: this.name,
-                    email: this.email,
-                    message: this.meessage
-                })
-
-            } catch (err) {
-                if (err instanceof ReferenceError) {
-                    alert("JSON Error: " + err.message);
-                } else {
-                    throw err; // rethrow
-                }
+            if (this.name == "" || this.email == "" || this.message == "") {
+                this.completionError()
             }
-            // Reset form field
-            this.name = ''
-            this.email = ''
-            this.message = ''
+            else {
+                try {
+                    emailjs.sendForm('service_ps7esew', 'template_nuokbvq', e.target, 'fKg-Qp0mj7sy-gvcD', {
+                        name: this.name,
+                        email: this.email,
+                        message: this.message
+
+                    }).then(
+
+                        () => {
+                            this.successMessage()
+                            clearState();
+                            setStatusMessage("Email sent success");
+                        },
+                        () => {
+                            this.failMessage()
+                        }
+                    )
+
+
+
+                } catch (err) {
+                    if (err instanceof ReferenceError) {
+                        this.failMessage()
+                    } else {
+                        this.failMessage()
+                        throw err; // rethrow
+                    }
+                }
+                // Reset form field
+                this.name = ''
+                this.email = ''
+                this.message = ''
+            }
         },
+        failMessage() {
+            this.toast("There was a problem, please try again", {
+                position: "bottom-left",
+                type: "error",
+                timeout: 5000,
+                closeOnClick: true,
+                pauseOnFocusLoss: true,
+                pauseOnHover: true,
+                draggable: true,
+                draggablePercent: 0.6,
+                showCloseButtonOnHover: false,
+                hideProgressBar: true,
+                closeButton: "button",
+                icon: "fas fa-rocket",
+                rtl: false
+            });
+        },
+        successMessage() {
+            this.toast("Your email was successfully sent", {
+                position: "bottom-left",
+                type: "success",
+                timeout: 5000,
+                closeOnClick: true,
+                pauseOnFocusLoss: true,
+                pauseOnHover: true,
+                draggable: true,
+                draggablePercent: 0.6,
+                showCloseButtonOnHover: false,
+                hideProgressBar: true,
+                closeButton: "button",
+                icon: "fas fa-rocket",
+                rtl: false
+            });
+        },
+        completionError() {
+            this.toast("Please fill out all fields", {
+                position: "bottom-left",
+                type: "error",
+                timeout: 5000,
+                closeOnClick: true,
+                pauseOnFocusLoss: true,
+                pauseOnHover: true,
+                draggable: true,
+                draggablePercent: 0.6,
+                showCloseButtonOnHover: false,
+                hideProgressBar: true,
+                closeButton: "button",
+                icon: "fas fa-rocket",
+                rtl: false
+            });
+        }
+
     }
 }
 </script>
@@ -57,6 +135,12 @@ export default {
 <style scoped>
 * {
     box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+    color: black;
 }
 
 label {
@@ -68,27 +152,7 @@ textarea {
     background: white;
 }
 
-.btn-orange {
-    background: #FF6B00;
-    color: #F9FAFB;
-}
 
-.button {
-    border-radius: 80px;
-    padding: 15px 40px;
-    font-weight: 700;
-    border: 1px solid transparent;
-}
-
-.button:hover {
-    border: 1px solid #380146;
-}
-
-.btn {
-    border-radius: 80px;
-    padding: 15px 40px;
-    font-weight: 700;
-}
 
 input[type=text],
 [type=email],

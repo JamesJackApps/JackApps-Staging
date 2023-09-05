@@ -2,7 +2,7 @@
 
 
 <template v-on:scroll="doStuff">
-  <section class="w-screen">
+  <section id="top" class="w-screen">
     <div class="flex flex-row mobile-column-reverse p-16 mobile-padding">
       <div class=" w-1/2 mobile-j  mobile-text left-0">
         <div class="mb-8 mobile-text">
@@ -19,15 +19,22 @@
               <p class="link-font mobile-text heading-text leading-tight mt-[5px]">successful</p>
             </div>
             <div class="flex mobile-column pt-4">
-              <!-- <div class="flex self-center">
-                <textarea placeholder="Enter your email address"
-                  class="resize-none h-[50px] w-48 pt-[10px] pl-1 bg-transparent border-t border-b border-l rounded-l-[50px]"></textarea>
-                <div class="w-12 border-t border-r border-b h-[50px] rounded-r-[50px]">
-                  <font-awesome-icon class="text-gray-400 pt-[15px]" :icon="['fas', 'magnifying-glass']" />
+              <form class="flex gap-2 mobile-column" @submit.prevent="bookSession">
+                <div class="flex rounded-r-[50px] border-2 w-60 hover:border-orange-300 self-center mb-2">
+                  <input
+                    class="resize-none  w-48 h-[50px]  bg-transparent pl-2 pt-1 pb-1   focus:outline-none border-l rounded-l-[50px]"
+                    type="email" v-model="email" name="email" placeholder="Your Email">
+                  <div
+                    class="w-12 border-t border-r border-b pt-1 pb-1 h-[50px] flex justify-center items-center rounded-r-[50px]">
+                    <font-awesome-icon class="text-gray-400  " :icon="['fas', 'magnifying-glass']" />
+                  </div>
                 </div>
-              </div> -->
-              <button @click="goto('contact')" class="btn ml-2 btn-purple mobile-button">Book a tech
-                session</button>
+                <button type="submit"
+                  class="  btn btn-orange relative text-black btn-book place-content-between flex text-sm/8 ">
+                  <p>Request a free consultation</p>
+                  <font-awesome-icon :icon="['fas', 'arrow-right']" class="items-center  flex  btn-arrow" />
+                </button>
+              </form>
             </div>
           </div>
 
@@ -44,7 +51,7 @@
   </section>
 
 
-  <section class="w-screen flex mobile-col flex-col p-8">
+  <section id="services" class="w-screen flex mobile-col flex-col p-8">
     <img class="w-1/2 mobile-j relative p-4" src="../assets/services/servicesheader.png">
     <div class="flex relative flex-col">
       <div class="flex mobile-column">
@@ -155,7 +162,7 @@
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial1.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
-            <h4 class="text-base font-semibold">Joe Wong</h4>
+            <h4 class="text-base text-white font-semibold">Joe Wong</h4>
             <p class="small-grey">Founder & Owner, Infinity 8 Digital</p>
           </div>
         </div>
@@ -170,7 +177,7 @@
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial2.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
-            <h4 class="text-base font-semibold">Leander De Caluwe</h4>
+            <h4 class="text-base text-white font-semibold">Leander De Caluwe</h4>
             <p class="small-grey">CEO, Kickerfy</p>
           </div>
         </div>
@@ -185,7 +192,7 @@
         <div class="test-card__content rounded-b-lg flex p-4 gap-4">
           <img src="../assets/testimonials/testimonial3.png" class="card-content__img">
           <div class="card-content__text flex flex-col justify-center mobile-card-info gap-2 p-2">
-            <h4 class="text-base font-semibold">Irfan Mir</h4>
+            <h4 class="text-base text-white font-semibold">Irfan Mir</h4>
             <p class="small-grey">Director of Sales</p>
           </div>
         </div>
@@ -279,6 +286,75 @@
   transform: translateY(175%);
 }
 
+
+.btn {
+  border-radius: 80px;
+  padding: 15px 40px;
+  font-weight: 700;
+}
+
+.btn-book {
+  width: 270px;
+  height: 50px;
+}
+
+.btn-nav {
+  width: 220px;
+  top: 5px;
+  height: 50px;
+}
+
+.btn-book p {
+  position: absolute;
+  top: 7px;
+  left: 30px;
+}
+
+.btn-arrow {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  font-size: 18px;
+}
+
+::placeholder {
+  align-self: center;
+
+}
+
+input,
+select,
+textarea {
+  color: black;
+}
+
+.btn-nav:hover {
+  height: 55px;
+  width: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-book:hover {
+  height: 55px;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover .btn-arrow {
+  transform: rotate(-45deg);
+  color: black;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-orange {
+  background: #FF6B00;
+  color: #F9FAFB;
+}
+
+.btn-purple {
+  background: #380146;
+  color: #F9FAFB;
+}
 
 
 .rocket {
@@ -637,12 +713,19 @@
 
 import ContactForm from "../components/ContactForm.vue"
 import ChatBot from "../components/ChatBot.vue"
+import emailjs from 'emailjs-com';
+import { useToast } from "vue-toastification";
+
 
 export default {
   name: 'app',
   components: {
     ContactForm,
     ChatBot
+  },
+  setup() {
+    const toast = useToast();
+    return { toast }
   },
   mounted() {
     this.getGeolocationInformation()
@@ -675,6 +758,93 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    failMessage() {
+      this.toast("There was a problem, please try again", {
+        position: "bottom-left",
+        type: "error",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: "fas fa-rocket",
+        rtl: false
+      });
+    },
+    successMessage() {
+      this.toast("Your email was successfully sent", {
+        position: "bottom-left",
+        type: "success",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: "fas fa-rocket",
+        rtl: false
+      });
+    },
+    completionError() {
+      this.toast("Please fill out all fields", {
+        position: "bottom-left",
+        type: "error",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: "fas fa-rocket",
+        rtl: false
+      });
+    },
+
+    bookSession(e) {
+      if (this.email == "") {
+        this.completionError()
+      }
+      else {
+        try {
+          emailjs.sendForm('service_ps7esew', 'template_0uatch7', e.target, 'fKg-Qp0mj7sy-gvcD', {
+            email: this.email,
+          }).then(
+
+            () => {
+              this.successMessage()
+              clearState();
+              setStatusMessage("Email sent success");
+            },
+            () => {
+              this.failMessage()
+            }
+          )
+
+        } catch (err) {
+          if (err instanceof ReferenceError) {
+            this.failMessage()
+          } else {
+            this.failMessage()
+            throw err; // rethrow
+          }
+        }
+        // Reset form field
+
+        this.email = ''
+      }
+    },
+
+
     async getGeolocationInformation() {
       // send your API request here
       const API_KEY = 'df0fb3b765af472ba970603aca182bef';

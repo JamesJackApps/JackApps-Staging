@@ -32,6 +32,19 @@ a {
   ;
 }
 
+
+.button {
+  border-radius: 80px;
+  padding: 15px 40px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  border: 1px solid #380146;
+}
+
+
 .heading-text {
   color: #380146;
 }
@@ -56,6 +69,11 @@ a {
   font-weight: 700;
 }
 
+.btn-book {
+  width: 220px;
+  height: 50px;
+}
+
 .btn-nav {
   position: absolute;
   width: 220px;
@@ -76,7 +94,7 @@ a {
   font-size: 18px;
 }
 
-.btn:hover {
+.btn-nav:hover {
   height: 55px;
   width: 240px;
   transition: all 0.3s ease-in-out;
@@ -128,8 +146,9 @@ a {
 .nav-link:hover {
 
   padding: 10px 15px 10px 15px;
-  background-color: #FF6B00;
   transition: all 0.4s ease-in-out;
+  color: #FF6B00;
+  cursor: pointer;
 }
 
 /* .btn {

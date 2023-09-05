@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class=" flex mobile-column">
             <div>
                 <img class="absolute" src="../assets/Footer/bg-img.png">
@@ -12,7 +12,8 @@
                 </div>
                 <div class="flex flex-col relative p-4 w-1/4 mobile-width">
                     <img class="self-center mb-4" src="../assets/Footer/jack-appslogoone-orange-1.png">
-                    <p class="text-center">High level experience in web design and development knowledge, producing quality
+                    <p class="text-center text-white">High level experience in web design and development knowledge,
+                        producing quality
                         work.
                     </p>
                 </div>
@@ -46,17 +47,23 @@
                             <h4 class="sub-heading orange-text mb-4 w-max">Contact Details</h4>
                             <ul>
                                 <li class="pt-2 pb-2">
-                                    <a class="text-sm link_font cursor-pointer" @click="goto('contact')">Email <p>
-                                            projects@jackapplications.com</p></a>
+                                    <a class="text-sm text-white link_font cursor-pointer" @click="goto('contact')">Email
+                                        <p>
+                                            projects@jackapplications.com</p>
+                                    </a>
                                 </li>
                                 <li class="pt-2 pb-2">
-                                    <a class="text-sm  link_font" href="">Address<p>Jack Applications Limited, First Floor,
-                                            85
-                                            Great Portland St, London, W1W 7LT
-                                        </p></a>
+                                    <p class="text-sm text-white link_font">Address
+                                    <p>Jack Applications Limited,
+                                        First Floor,
+                                        85
+                                        Great Portland St, London, W1W 7LT
+                                    </p>
+                                    </p>
                                 </li>
                                 <li class="pt-2 pb-2">
-                                    <a class="text-sm  link_font cursor-pointer" href="tel:07468624228">Contact Number<p>
+                                    <a class="text-sm text-white link_font cursor-pointer" href="tel:07468624228">Contact
+                                        Number<p>
                                             07468 624 288 </p>
                                     </a>
                                 </li>
@@ -90,7 +97,7 @@
                 </div>
 
             </div>
-            <div class="footer-bottom flex w-full p-4">
+            <div class="footer-bottom flex w-screen p-4">
 
                 <div class="social-icons gap-2 flex mobile-social w-1/2 mobile-width">
                     <p class="orange-text">&copy 2023 All Rights Reserved</p>
