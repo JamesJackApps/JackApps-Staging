@@ -9,7 +9,7 @@
         </div>
 
         <div class="w-3/5 flex justify-end text-center ">
-            <img @click="goto('top')" class="w-150 h-auto nav-img absolute left-1/3 " src="../assets/logo.png"
+            <img @click="goto('top')" class="w-[150px] pt-2 h-auto nav-img absolute left-1/3 " src="../assets/logo.png"
                 alt="Jack Apps Logo">
             <a @click="goto('services')" class="link-font nav-link text-sm/8 h-16 ">Services</a>
             <a @click="goto('footer')" class="link-font nav-link text-sm/8 h-full ">About Us</a>

@@ -30,7 +30,7 @@
                   </div>
                 </div>
                 <button type="submit"
-                  class="  btn btn-orange relative text-black btn-book place-content-between flex text-sm/8 ">
+                  class="  btn btn-purple relative text-black btn-book place-content-between flex text-sm/8 ">
                   <p>Request a free consultation</p>
                   <font-awesome-icon :icon="['fas', 'arrow-right']" class="items-center  flex  btn-arrow" />
                 </button>
@@ -211,7 +211,7 @@
       <ContactForm />
     </div>
   </section>
-  <div class=" fixed z-20002 top-0 right-0">
+  <div class=" fixed z-20002 right-0">
     <ChatBot />
   </div>
 </template>
@@ -342,9 +342,18 @@ textarea {
 
 .btn:hover .btn-arrow {
   transform: rotate(-45deg);
-  color: black;
+
   transition: all 0.4s ease-in-out;
 }
+
+.btn-orange:hover .btn-arrow {
+  color: black;
+}
+
+.btn-purple:hover .btn-arrow {
+  color: #FF6B00;
+}
+
 
 .btn-orange {
   background: #FF6B00;

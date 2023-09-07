@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer" id="footer">
+    <footer class="footer relative" id="footer">
         <div class=" flex mobile-column">
             <div>
                 <img class="absolute" src="../assets/Footer/bg-img.png">
@@ -11,7 +11,7 @@
 
                 </div>
                 <div class="flex flex-col relative p-4 w-1/4 mobile-width">
-                    <img class="self-center mb-4" src="../assets/Footer/jack-appslogoone-orange-1.png">
+                    <img class="self-center h-[50px] w-auto mb-4" src="../assets/Footer/jack-appslogoone-orange-1.png">
                     <p class="text-center text-white">High level experience in web design and development knowledge,
                         producing quality
                         work.
@@ -88,16 +88,17 @@
                         </ul>
                     </div> -->
                     </div>
-                    <button @click="goto()" class="btn-footer btn-orange w-1/2">
+                    <button @click="goto()"
+                        class=" btn flex justify-center items-center btn-footer relative  btn-orange w-1/2">
                         <p class="text-sm">Contact JackApps Now</p>
                         <font-awesome-icon :icon="['fas', 'arrow-right']"
-                            class="items-center text-sm  flex btn-arrow-reg" />
+                            class="items-center text-sm  flex   btn-arrow btn-footer-arrow" />
                     </button>
 
                 </div>
 
             </div>
-            <div class="footer-bottom flex w-screen p-4">
+            <div class="absolute bottom-0 flex w-screen p-4">
 
                 <div class="social-icons gap-2 flex mobile-social w-1/2 mobile-width">
                     <p class="orange-text">&copy 2023 All Rights Reserved</p>
@@ -158,6 +159,8 @@ export default {
 
     }
 
+
+
     .mobile-row {
         flex-direction: row;
     }
@@ -177,15 +180,22 @@ export default {
     justify-content: center;
     align-items: center;
     border-radius: 80px;
-    padding: 15px 20px;
     display: flex;
     font-weight: 700;
-    height: 50px;
+    width: 270px !important;
+    transition: all 0.4s ease;
 }
 
-.btn-arrow-reg {
-    padding-left: 10px;
+.btn-footer-arrow {
+    padding-top: 5px !important;
+    margin-left: 20px !important;
 }
+
+.btn-footer:hover {
+    width: 300px !important;
+
+}
+
 
 .social-icon {
     background: #130018;
