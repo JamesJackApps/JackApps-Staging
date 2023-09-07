@@ -101,8 +101,11 @@
   </section>
   <section class="w-screen bg-gray-100 flex flex-row-reverse mobile-column-reverse p-4">
     <div class="mt-8 flex flex-col justify-center mob-ben pt-24 w-1/2 mobile-j">
-      <h3 class="sub-heading-text heading-text text-6xl text-center font-[400] tracking-[40%]">UNLOCK YOUR ONLINE
-        SUCCESS</h3>
+      <div class="drop-shadow-md bg-white mb-2 w-fit">
+        <h3 class="sub-heading-text   heading-text text-6xl text-center font-[400] tracking-[40%]">UNLOCK
+          YOUR ONLINE
+          SUCCESS</h3>
+      </div>
       <div class="relative flex justify-center">
         <img class="w-1/2 mobile-j mobile-benefits-img self-center" src="../assets/unlocksuccess/C.png">
         <font-awesome-icon class="brand-icon brand-icon-purple absolute w-[50px] h-auto right-10 top-12"
