@@ -62,27 +62,27 @@
           </div> -->
         </div>
 
-        <div class="flex relative p-4 h-screen w-full gap-4 right-12 mobile-column image-center mb-4">
+        <div class="flex relative p-4 h-screen w-full gap-4right-12 mobile-column image-center mb-4">
 
           <div class="right-[440px] mobile-layout top-12  absolute">
             <img class="w-64 h-48 object-cover mobile-layout-img  rounded" src="../assets/services/service-pic-1.png">
             <p class="link-font heading-text leading-tight text-center">Web Development</p>
           </div>
-          <div class="right-[220px] mobile-layout top-36 z-40 absolute">
+          <div class="right-[220px] mobile-layout top-64 z-40 absolute">
             <img class="w-64 h-48 object-cover mobile-layout-img  rounded" src="../assets/services/service-pic-2.png">
             <p class="link-font heading-text leading-tight text-center">Web Design</p>
           </div>
-          <div class="right-12 top-[-12px] mobile-layout absolute">
-            <img class="w-64 h-48 object-cover mobile-layout-img rounded" src="../assets/services/service-pic-3.png">
+          <div class="right-12 top-0 mobile-layout absolute">
+            <img class="w-64 h-64 object-cover mobile-layout-img rounded" src="../assets/services/service-pic-3.png">
             <p class="link-font heading-text leading-tight  ml-4 text-center">SEO</p>
           </div>
         </div>
       </div>
-      <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mobile-hide mb-48">
+      <!-- <div class="w-3/5 absolute right-12 flex justify-evenly gap-12  bottom-[-140px] mobile-hide mb-48">
         <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/start.png">
         <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/quote.png">
         <img class="cursor-pointer" @click="goto('contact')" src="../assets/services/consult.png">
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- <section>
